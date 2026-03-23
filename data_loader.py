@@ -38,7 +38,6 @@ def preprocess_data(X, y, test_size=0.2, random_state=42):
 
     return X_train, X_test, y_train, y_test
 
-
 def subsample_data(X, y, n_samples, random_state=42):
     """
     Subsample dataset for small-data experiments.
@@ -46,7 +45,6 @@ def subsample_data(X, y, n_samples, random_state=42):
     np.random.seed(random_state)
     indices = np.random.choice(len(X), size=n_samples, replace=False)
     return X[indices], y[indices]
-
 
 def add_label_noise(y, noise_ratio, random_state=42):
     """
